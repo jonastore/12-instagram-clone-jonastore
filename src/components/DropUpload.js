@@ -32,10 +32,10 @@ class DropUpload extends Component {
     let upload = request.post('https://api.cloudinary.com/v1_1/jonastore/image/upload').field('upload_preset', 'oanabro2').field('file', file);
 
     upload.then((response) => {
+      console.log(response);
         this.setState({
-          fileUrl: response.body.secure_url
+          fileUrl: response.body.url
         });
-        console.log(this.state.fileUrl)
     });
   }
 
