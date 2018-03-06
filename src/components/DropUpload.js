@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
-//const preset = 'oanabro2';
-//const CLOUDINARY_UPLOAD_URL = 'https://api.cloudinary.com/v1_1/your_cloudinary_app_name/upload';
-//const cloudApi = 'https://api.cloudinary.com/v1_1/jonastore/image/upload';
-
 class DropUpload extends Component {
 
 	constructor(props) {
@@ -14,6 +10,7 @@ class DropUpload extends Component {
 
     this.state = {
       fileUrl: null,
+      date: null,
     };
   }
 
@@ -22,13 +19,14 @@ class DropUpload extends Component {
   }
 
   uploadImage(file) {
-    let upload = request.post('https://api.cloudinary.com/v1_1/jonastore/image/upload').field('upload_preset', 'oanabro2').field('file', file);
+    let handleRequest = request.post('https://api.cloudinary.com/v1_1/jonastore/image/upload').field('upload_preset', 'oanabro2').field('file', file);
 
-    upload.then((response) => {
+    handleRequest.then((response) => {
       console.log(response);
       console.log(response.body.public_id);
         this.setState({
-          fileUrl: response.body.url
+          fileUrl: response.body.url,
+          date: response.body.created_at
         });
     });
   }
@@ -37,11 +35,13 @@ class DropUpload extends Component {
         return (
           <div>
               <Dropzone
+                className="dropZone"
                 onDrop={this.dropImage.bind(this)}>
                 <p>Drop or select image</p>
               </Dropzone>
               <div>
-                  <img src={this.state.fileUrl} />
+                  <p>{ this.state.date }</p>
+                  <img src={ this.state.fileUrl } />
               </div>
           </div>
         );
