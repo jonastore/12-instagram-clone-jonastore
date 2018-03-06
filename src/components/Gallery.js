@@ -4,6 +4,8 @@ import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { render } from 'react-dom';
 
 import Like from './Like'
+import Comment from './Comment'
+
 
 class Gallery extends Component {
 
@@ -35,6 +37,7 @@ class Gallery extends Component {
                                                 <Image publicId={data.public_id} />
                                             </a>
                                             <Like />
+                                            <Comment />
                                     </div>
                                 )
                             })
