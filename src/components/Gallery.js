@@ -3,8 +3,10 @@ import axios from 'axios';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { render } from 'react-dom';
 
+import View from './components/View'
+
 class Gallery extends Component {
-  
+
     constructor(props) {
         super(props);
 
@@ -28,7 +30,7 @@ class Gallery extends Component {
                         {
                             this.state.gallery.map(data => {
                                 return (
-                                    <div className="responsive" key={data.public_id}>
+                                    <div key={data.public_id}>
                                             <a target="_blank" href={`http://res.cloudinary.com/jonastore/image/upload/${data.public_id}.jpg`}>
                                                 <Image publicId={data.public_id} />
                                             </a>

@@ -17,6 +17,7 @@ class Like extends Component {
   render() {
         return (
           <div>
+            <button><3</button>
           </div>
         );
     }
