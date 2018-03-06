@@ -1,9 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
-//shit that should be removed below
-import { Image, Transformation, CloudinaryContext } from 'cloudinary-react';
-import { render } from 'react-dom';
-//experimental shit that might get removed who knows
+
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
