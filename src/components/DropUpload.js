@@ -21,7 +21,7 @@ class DropUpload extends Component {
     };
   }
 
-  onImageDrop(files) {
+  dropImage(files) {
     this.setState({
       uploadedFile: files[0]
     });
@@ -35,6 +35,7 @@ class DropUpload extends Component {
         this.setState({
           fileUrl: response.body.secure_url
         });
+        console.log(this.state.fileUrl)
     });
   }
 
@@ -42,8 +43,8 @@ class DropUpload extends Component {
         return (
           <div>
               <Dropzone
-                onDrop={this.onImageDrop.bind(this)}>
-                <p>Drop an image or click to select a file to upload.</p>
+                onDrop={this.dropImage.bind(this)}>
+                <p>Drop or select image</p>
               </Dropzone>
               <div>
                   <img src={this.state.fileUrl} />
