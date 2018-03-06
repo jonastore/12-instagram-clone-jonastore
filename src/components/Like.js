@@ -9,15 +9,26 @@ class Like extends Component {
     super(props);
 
     this.state = {
-      fileUrl: null,
-      date: null,
+      like: 'Like or dislike this crappy picture!',
     };
+    this.likeImage = this.likeImage.bind(this);
   }
+
+  likeImage(event) {
+      this.setState({like: event.target.value});
+  }
+
 
   render() {
         return (
           <div>
-            <button><3</button>
+            { this.state.like }
+            <select value={this.state.value} onChange={this.likeImage}>
+              <option>'😐'</option>
+              <option>'😄'</option>
+              <option>'🤮'</option>
+              <option>'🤮'</option>
+            </select>
           </div>
         );
     }

@@ -3,7 +3,7 @@ import axios from 'axios';
 import { CloudinaryContext, Transformation, Image } from 'cloudinary-react';
 import { render } from 'react-dom';
 
-import View from './components/View'
+import Like from './Like'
 
 class Gallery extends Component {
 
@@ -34,6 +34,7 @@ class Gallery extends Component {
                                             <a target="_blank" href={`http://res.cloudinary.com/jonastore/image/upload/${data.public_id}.jpg`}>
                                                 <Image publicId={data.public_id} />
                                             </a>
+                                            <Like />
                                     </div>
                                 )
                             })
