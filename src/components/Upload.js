@@ -1,30 +1,40 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import request from 'superagent';
 
 
 class Upload extends Component {
 
-	state = {
-		selectedFile: null,
-	}
+  constructor(props) {
+    super(props);
 
-	handleChange = event => {
-    	console.log(event.target.files[0]); //remove files[0]
-    	this.setState({selectedFile: event.target.files[0]})
-    }
+    this.state = {
+      fileUrl: null,
+    };
+  }
 
-    handleUpload = () => {
-    	axios.post();
-    }
+  dropImage(files) {
+    this.setState({
+      uploadedFile: files[0]
+    });
+    this.uploadImage(files[0]);
+  }
 
+  uploadImage(file) {
+    let upload = request.post('https://api.cloudinary.com/v1_1/jonastore/image/upload').field('upload_preset', 'oanabro2').field('file', file);
 
+    upload.then((response) => {
+      console.log(response);
+        this.setState({ fileUrl: response });
+    });
+  }
 
   render() {
     return (
       <div className="App">
         DROPBOX HERE
-      	<input onChange={this.handleChange} type="file"/>
-      	<button onClick={this.handleUpload}>Upload</button>
+      	<input onChange={this.uploadImage} type="file"/>
+      	<button onClick={this.uploadImage}>Upload</button>
       </div>
     );
   }
