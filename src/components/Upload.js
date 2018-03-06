@@ -13,19 +13,15 @@ class Upload extends Component {
     };
   }
 
-  dropImage(files) {
-    this.setState({
-      uploadedFile: files[0]
-    });
-    this.uploadImage(files[0]);
-  }
-
   uploadImage(file) {
     let upload = request.post('https://api.cloudinary.com/v1_1/jonastore/image/upload').field('upload_preset', 'oanabro2').field('file', file);
 
     upload.then((response) => {
       console.log(response);
-        this.setState({ fileUrl: response });
+      console.log(response.body.public_id);
+        this.setState({
+          fileUrl: response.body.url
+        });
     });
   }
 

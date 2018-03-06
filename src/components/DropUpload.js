@@ -22,9 +22,6 @@ class DropUpload extends Component {
   }
 
   dropImage(files) {
-    this.setState({
-      uploadedFile: files[0]
-    });
     this.uploadImage(files[0]);
   }
 
@@ -33,6 +30,7 @@ class DropUpload extends Component {
 
     upload.then((response) => {
       console.log(response);
+      console.log(response.body.public_id);
         this.setState({
           fileUrl: response.body.url
         });
