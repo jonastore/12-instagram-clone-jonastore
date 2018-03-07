@@ -39,10 +39,7 @@ class DropUpload extends Component {
                 onDrop={this.dropImage.bind(this)}>
                 <p className="dropzoneText">Drop or select image</p>
               </Dropzone>
-              <div>
-                  <p>{ this.state.date }</p>
                   <img src={ this.state.fileUrl } />
-              </div>
           </div>
         );
     }
