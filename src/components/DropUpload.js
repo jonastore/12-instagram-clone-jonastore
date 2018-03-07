@@ -36,13 +36,13 @@ class DropUpload extends Component {
 
   render() {
         return (
-          <div>
+          <div class="container">
               <Dropzone
                 className="dropZone"
                 onDrop={this.dropImage.bind(this)}>
-                <p class="fas fa-upload"></p>
+                <p class="fas fa-upload dropzoneText"></p>
               </Dropzone>
-                  <img src={ this.state.fileUrl } />
+                  <img className="preview" src={ this.state.fileUrl } />
           </div>
         );
     }

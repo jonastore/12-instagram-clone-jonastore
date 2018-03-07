@@ -30,19 +30,35 @@ body {
   transition: opacity 0.5s ease-out;
   opacity: 1;
   z-index: 2;
+}*/
+
+.container {
+  text-align: center;
 }
 
+.preview {
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 100px;
+
+}
 
 .dropzoneText {
 	text-align: center;
 	font-size: 20px;
 	font-weight: bold;
-	color: #e7ad01;
+	color: white;
 	text-shadow: 0px 1px #283966;
-}*/
+  margin-left: 50%;
+  margin-right: 50%;
+}
 
 .dropZone {
-  color: #fff;
+  width: auto;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+
   background: linear-gradient(-45deg, #c14d1e, #7ebca3, #e7ad01);
   background-size: 300% 300%;
   animation: Gradient 8s infinite;
