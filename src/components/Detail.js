@@ -1,23 +1,14 @@
 import React, { Component } from 'react';
 
 class Detail extends Component {
-
-	constructor(props) {
-    super(props);
-
-    this.state = {
-      detail: null,
-    };
-    
-  }
-
   
 
 
   render() {
+        console.log(this.props)
         return (
           <div>
-            detail working
+            Detail Result: {(this.props.location.key)}
           </div>
         );
     }

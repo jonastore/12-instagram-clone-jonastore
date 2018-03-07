@@ -12,8 +12,8 @@ class App extends Component {
     	<BrowserRouter>
     		<div className="App">
       				TITLE OF THE APP
-      			<Route path="/testing" component={Test} />
-    			<Route path="/img/:data.public_id" render={props => <Detail {...props } />} />
+      			<Route path={"/test/:testing"} component={Test} />
+    			<Route path="/img/:id" component={Detail} />
     		</div>
     	</BrowserRouter>
 

@@ -10,7 +10,6 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import DropUpload from './components/DropUpload'
 import Gallery from './components/Gallery'
 import Detail from './components/Detail'
-import Test from './components/Test'
 
 
 ReactDOM.render(<App />, document.getElementById('root'));

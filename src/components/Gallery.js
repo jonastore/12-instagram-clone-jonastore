@@ -37,6 +37,8 @@ class Gallery extends Component {
 
     //<a href={`http://res.cloudinary.com/jonastore/image/upload/${data.public_id}.jpg`}>*image here*</a>
 
+    //<Route path="/img/:data.public_id" render={props => <Detail {...props } />} />
+    
     render(){
         return (
           <BrowserRouter>

@@ -2,22 +2,12 @@ import React, { Component } from 'react';
 
 class Detail extends Component {
 
-	constructor(props) {
-    super(props);
-
-    this.state = {
-      detail: null,
-    };
-    
-  }
-
-  
-
 
   render() {
+      console.log(this.props)
         return (
           <div>
-            TEST ROUTE AND COMPONENT IS WORKING
+            RESULT: {(this.props.params)}
           </div>
         );
     }
