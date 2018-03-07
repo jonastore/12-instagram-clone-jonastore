@@ -1,3 +1,16 @@
 li {
 	display: inline;
+	margin: 0px;
+
+}
+
+.img {
+	height: 150px;
+	margin: 0px;
+}
+
+a {
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
 }

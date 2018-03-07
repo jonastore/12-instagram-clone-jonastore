@@ -43,9 +43,9 @@ class Gallery extends Component {
                 <ul>
                     { this.state.gallery.map(data => {return (
                             <li>
-                                <Link to={`/img/${data.public_id}`}>
-                                    <Image publicId={data.public_id} />
-                                </Link>
+                                <a href={`/img/${data.public_id}`}>
+                                    <Image className="img" publicId={data.public_id} />
+                                </a>
                             </li>
                             )
                         }) 
