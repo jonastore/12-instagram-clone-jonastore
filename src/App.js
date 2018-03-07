@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import { BrowserRouter, Link, Route } from 'react-router-dom';
-import logo from './logo.jpg';
+import logodark from './logodark.jpg';
 import Detail from './components/Detail'
 import Test from './components/Test'
 
@@ -11,7 +11,7 @@ class App extends Component {
 
     	<BrowserRouter>
     		<div className="App">
-      				<img id="logo" src={ logo } />
+      				<img id="logo" src={ logodark } />
       			<Route path={"/test/:testing"} component={Test} />
     			<Route path="/img/:id" component={Detail} />
     		</div>

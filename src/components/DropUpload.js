@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import './styles/DropUpload.css'
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
+//import FontAwesome from 'react-fontawesome';
+//var FontAwesome = require('react-fontawesome');
+
 
 class DropUpload extends Component {
 
@@ -37,7 +40,7 @@ class DropUpload extends Component {
               <Dropzone
                 className="dropZone"
                 onDrop={this.dropImage.bind(this)}>
-                <p className="dropzoneText">Drop or select image</p>
+                <p class="fas fa-upload"></p>
               </Dropzone>
                   <img src={ this.state.fileUrl } />
           </div>
