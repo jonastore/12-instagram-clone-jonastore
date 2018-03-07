@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles/Like.css';
 import { render } from 'react-dom'; 
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
@@ -31,29 +32,25 @@ class Gallery extends Component {
             });
     }
 
-    /*<Router path="/img/:data.public_id" render={({match}) => (
-                    <Detail detail={this.state.gallery.find(img => img.id === match.params.data.public_id )}/>
-                )}/>*/
 
-    //<a href={`http://res.cloudinary.com/jonastore/image/upload/${data.public_id}.jpg`}>*image here*</a>
 
-    //<Route path="/img/:data.public_id" render={props => <Detail {...props } />} />
-    
+    //add Like and Comment below and find a better way to freaking comment/like
     render(){
         return (
           <BrowserRouter>
             <div className="main">
                 <CloudinaryContext cloudName="jonastore">
+                <ul>
                     { this.state.gallery.map(data => {return (
-                            <div>
+                            <li><div>
                                 <Link to={`/img/${data.public_id}`}>
                                     <Image publicId={data.public_id} />
                                 </Link>
-                                <Like /><Comment />
-                            </div>
+                            </div></li>
                             )
                         }) 
                     }
+                </ul>
                 </CloudinaryContext>
             </div>
           </BrowserRouter>

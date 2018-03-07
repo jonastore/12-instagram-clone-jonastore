@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './styles/Like.css';
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
@@ -22,7 +22,7 @@ class Like extends Component {
   render() {
         return (
           <div>
-            { this.state.like }
+            <span class="like">{ this.state.like }</span>
             <select value={this.state.value} onChange={this.likeImage}>
               <option>😐</option>
               <option>😄</option>
