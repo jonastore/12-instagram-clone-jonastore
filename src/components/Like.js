@@ -24,10 +24,10 @@ class Like extends Component {
           <div>
             { this.state.like }
             <select value={this.state.value} onChange={this.likeImage}>
-              <option>'😐'</option>
-              <option>'😄'</option>
-              <option>'🤮'</option>
-              <option>'🤮'</option>
+              <option>😐</option>
+              <option>😄</option>
+              <option>🤮</option>
+              <option>🐶</option>
             </select>
           </div>
         );
