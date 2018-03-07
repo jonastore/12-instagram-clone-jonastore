@@ -12,6 +12,12 @@ import Like from './Like';
 import Comment from './Comment';
 import Detail from './Detail';
 
+class UpdateBlocker extends React.PureComponent {
+  render() {
+    return this.props.children
+  }
+}
+
 class Gallery extends Component {
 
     constructor(props) {
@@ -32,8 +38,7 @@ class Gallery extends Component {
             });
     }
 
-
-
+    //a = <Link to={}>
     //add Like and Comment below and find a better way to freaking comment/like
     render(){
         return (

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import './styles/DropUpload.css'
 import Dropzone from 'react-dropzone';
 import request from 'superagent';
 
