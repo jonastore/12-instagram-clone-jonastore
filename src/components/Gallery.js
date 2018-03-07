@@ -11,7 +11,6 @@ import Like from './Like';
 import Comment from './Comment';
 import Detail from './Detail';
 
-
 class Gallery extends Component {
 
     constructor(props) {
