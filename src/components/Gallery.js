@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './styles/Like.css';
+import './styles/Gallery.css';
 import { render } from 'react-dom'; 
 import { BrowserRouter, Link, Route } from 'react-router-dom';
 
@@ -42,11 +42,11 @@ class Gallery extends Component {
                 <CloudinaryContext cloudName="jonastore">
                 <ul>
                     { this.state.gallery.map(data => {return (
-                            <li><div>
+                            <li>
                                 <Link to={`/img/${data.public_id}`}>
                                     <Image publicId={data.public_id} />
                                 </Link>
-                            </div></li>
+                            </li>
                             )
                         }) 
                     }
