@@ -6,7 +6,8 @@ li {
 
 .img {
 	height: 150px;
-	margin: 0px;
+	margin: 1%;
+	border: 2px solid white;
 }
 
 a {
