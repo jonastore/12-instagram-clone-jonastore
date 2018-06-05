@@ -1,0 +1,17 @@
+li {
+	display: inline;
+	margin: 0px;
+
+}
+
+.img {
+	height: 150px;
+	margin: 1%;
+	border: 2px solid white;
+}
+
+a {
+	padding: 0px;
+	margin: 0px;
+	height: 0px;
+}

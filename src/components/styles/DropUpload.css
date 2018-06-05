@@ -1,0 +1,78 @@
+
+@font-face {
+  font-family: 'yukari';
+  src: url('../../yukari.ttf'); /* IE9 Compat Modes */
+}
+body {
+  font-family: 'yukari';
+}
+
+.img {
+	height: 100px;
+}
+
+/*.dropZone {
+  background: linear-gradient(#222526, #484f51);
+  height: 121px;
+  width: 226px;
+  border: 1.5px solid #232728;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 3%;
+  box-shadow: 0px 1.2px #484f51;
+  z-index: 1;
+  transition: opacity 0.5s ease-out;
+}
+
+.dropZone:hover {
+	background: linear-gradient(#484f51, #222526);
+  transition: opacity 0.5s ease-out;
+  opacity: 1;
+  z-index: 2;
+}*/
+
+.container {
+  text-align: center;
+}
+
+.preview {
+  margin-left: 25%;
+  margin-right: 25%;
+  height: 100px;
+
+}
+
+.dropzoneText {
+	text-align: center;
+	font-size: 23px;
+	font-weight: bold;
+	color: white;
+	text-shadow: 0px 1px #283966;
+  margin-left: 50%;
+  margin-right: 50%;
+}
+
+.dropZone {
+  width: auto;
+  height: 70px;
+  margin-left: auto;
+  margin-right: auto;
+
+  background: linear-gradient(65deg, #c14d1e, #7ebca3, #e7ad01);
+  background-size: 300% 300%;
+  animation: Gradient 5s infinite;
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50% 
+  }
+  50% {
+    background-position: 100% 0%
+  }
+  100% {
+    background-position: 0% 50%
+  }
+
+}
