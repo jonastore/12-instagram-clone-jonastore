@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import request from 'superagent';
 
-
 class Upload extends Component {
 
   constructor(props) {

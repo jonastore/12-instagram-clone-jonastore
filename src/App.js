@@ -4,6 +4,7 @@ import { BrowserRouter, Link, Route } from 'react-router-dom';
 import logodark from './logodark.jpg';
 import Detail from './components/Detail'
 import Test from './components/Test'
+import SignUp from './components/SignUp'
 
 class App extends Component {
   render() {
@@ -14,6 +15,8 @@ class App extends Component {
       				<img id="logo" src={ logodark } />
       			<Route path={"/test/:testing"} component={Test} />
     			<Route path="/img/:id" component={Detail} />
+					<Route path="/register" component={SignUp} />
+
     		</div>
     	</BrowserRouter>
 
