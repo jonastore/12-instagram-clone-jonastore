@@ -76,4 +76,13 @@ router.get('/me', TokenVerify, function(req, res) {
     });
 })
 
+router.get('/home', function (req, res) {
+    if(sessions && sessions.name){
+      res.sendFile(__dirname + '/components/Home.js');
+    }
+    else{
+      res.send('unauthorized');
+    }
+  })
+
 module.exports = router;
