@@ -13,7 +13,7 @@ class SignUp extends Component{
       password:''
     };
 
-    this.signUp = this.signUp.bind(this);
+    this.onSubmit = this.onSubmit.bind(this);
     this.nameChange = this.nameChange.bind(this);
     this.emailChange = this.emailChange.bind(this);
     this.passwordChange = this.passwordChange.bind(this);
@@ -32,7 +32,7 @@ class SignUp extends Component{
     this.setState({password:e.target.value})
   }
 
-  signUp(e){
+  onSubmit(e){
     e.preventDefault();
 
     axios.post('http://localhost:3001/auth/register', {
@@ -54,9 +54,9 @@ class SignUp extends Component{
       <div>
         <h3>Register</h3>
         <form>
-          <form onSubmit={this.signUp}>
+          <form onSubmit={this.onSubmit}>
           <input type="name" onChange={this.nameChange} placeholder="Name" required autofocus />
-          <input type="email" onChange={this.emailChange} id="inputEmail" placeholder="Email" required autofocus />
+          <input type="email" onChange={this.emailChange} placeholder="Email" required autofocus />
           <input type="password" onChange={this.passwordChange} placeholder="Password" required />
           <button type="submit">Sign up</button>
           </form>
